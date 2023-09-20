@@ -23,3 +23,11 @@ if (driversNameLength > navigatorsNameLength) {
 }
 
 // Iteration 3: Loops
+//  3.1
+let driverNameSpelled = "";
+for (let i = 0; i < driversNameLength; i++) {
+  const letter = hacker1[i].toUpperCase() + " ";
+  driverNameSpelled += letter;
+}
+
+console.log(driverNameSpelled);
