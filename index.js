@@ -1,7 +1,7 @@
 // Iteration 1: Names and Input
-const hacker1 = 'Rony';
+const hacker1 = "Rony";
 console.log(`The driver's name is ${hacker1}.`);
-const hacker2 = 'Elena';
+const hacker2 = "Elena";
 console.log(`The navigator's name is ${hacker2}.`);
 
 // Iteration 2: Conditionals
@@ -24,18 +24,30 @@ if (driversNameLength > navigatorsNameLength) {
 
 // Iteration 3: Loops
 //  3.1
-let driverNameSpelled = '';
+let driverNameSpelled = "";
 for (let i = 0; i < driversNameLength; i++) {
-  const letter = hacker1[i].toUpperCase() + ' ';
+  const letter = hacker1[i].toUpperCase() + " ";
   driverNameSpelled += letter;
 }
 
 console.log(driverNameSpelled);
 
 // 3.2
-let navigatorNameReversed = '';
+let navigatorNameReversed = "";
 for (let i = navigatorsNameLength - 1; i >= 0; i--) {
   navigatorNameReversed += hacker2[i];
 }
 
 console.log(navigatorNameReversed);
+
+// 3.3
+
+const compareNames = hacker1.localeCompare(hacker2);
+
+if (compareNames === 1) {
+  console.log("The driver's name goes first.");
+} else if (compareNames === -1) {
+  console.log("Yo, the navigator goes first, definitely.");
+} else {
+  console.log("What?! You both have the same name?");
+}
